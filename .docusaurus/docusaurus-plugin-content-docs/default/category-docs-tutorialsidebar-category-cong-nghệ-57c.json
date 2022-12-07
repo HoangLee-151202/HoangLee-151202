@@ -1,0 +1,16 @@
+{
+  "title": "Công nghệ",
+  "description": "5 minutes to learn the most important Docusaurus concepts.",
+  "slug": "/category/công-nghệ",
+  "permalink": "/docs/category/công-nghệ",
+  "navigation": {
+    "previous": {
+      "title": "Tutorial Intro",
+      "permalink": "/docs/intro"
+    },
+    "next": {
+      "title": "ReactJS",
+      "permalink": "/docs/technology/react"
+    }
+  }
+}

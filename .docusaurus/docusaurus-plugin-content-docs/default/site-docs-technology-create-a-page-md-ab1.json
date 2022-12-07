@@ -1,0 +1,27 @@
+{
+  "unversionedId": "technology/create-a-page",
+  "id": "technology/create-a-page",
+  "title": "React",
+  "description": "Add Markdown or React files to src/pages to create a standalone page:",
+  "source": "@site/docs/technology/create-a-page.md",
+  "sourceDirName": "technology",
+  "slug": "/technology/create-a-page",
+  "permalink": "/docs/technology/create-a-page",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/technology/create-a-page.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Công nghệ",
+    "permalink": "/docs/category/công-nghệ"
+  },
+  "next": {
+    "title": "React",
+    "permalink": "/docs/technology/react"
+  }
+}
