@@ -240,7 +240,78 @@ return (
 );
 ```
 
-### 2.6. Conditional Rendering
+### 2.6. Conditional Rendering (Render có điều kiện)
+Trong React, ta có thể tạo ra các component riêng biệt chứa đựng hành vi mà ta cần. Tiếp đến, dựa trên trạng thái (state) hiện tại của ứng dụng (application), ta sẽ chỉ định việc các component đó có nên xuất hiện hay không.
+
+Conditional Rendering hoạt động như cách ta dùng câu lệnh if. Ta xét thử hai component bên dưới:
+
+```jsx
+function UserGreeting(props) {
+  return <h1>Welcome back!</h1>;
+}
+
+function GuestGreeting(props) {
+  return <h1>Please sign up.</h1>;
+}
+```
+
+Ta tạo một component với tên ***Greeting***, nhiệm vụ của nó là hiển thị một trong hai component phía trên dựa vào trạng thái của người dùng (đã đăng nhập hay chưa).
+```jsx
+function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
+```
+<h1>Gán giá trị element vào biến</h1>
+
+Ta có thể dùng biến để lưu lại các element.  Điều này giúp cho bạn có thể render có điều kiện một phần của component trong khi phần còn lại của component sẽ không bị thay đổi.
+
+Ta có thể xét thử ví dụ khi khởi tạo hai nút đăng nhập và đăng xuất:
+```jsx
+function LoginButton(props) {
+  return (
+    <button onClick={props.onClick}>
+      Login
+    </button>
+  );
+}
+
+function LogoutButton(props) {
+  return (
+    <button onClick={props.onClick}>
+      Logout
+    </button>
+  );
+}
+```
+
+<h1>Thay thế If bằng toán tử logic &&</h1>
+
+Ta có thể nhúng HTML vào JSX bằng cách bọc lại trong ngoặc nhọn, điều này cũng áp dụng được với các toán tử mang tính logic. Ta có thể xét thử ví dụ bên dưới:
+
+```jsx
+function Mailbox(props) {
+  const unreadMessages = props.unreadMessages;
+  return (
+    <div>
+      <h1>Hello!</h1>
+      {unreadMessages.length > 0 &&
+        <h2>
+          You have {unreadMessages.length} unread messages.
+        </h2>
+      }
+    </div>
+  );
+}
+```
+Trong ví dụ trên, biểu thức trong {} sẽ xuất hiện ở màn hình nếu điều kiện ở phía trước trả về là ***true***, ***false*** thì React sẽ bỏ qua nó.
+
+<h1>Thay thế If-Else bằng toán tử điều kiện</h1>
+
+Ta cũng có thể sử dụng toán tử ba ngôi: ***Điều kiện ? true : false***
 
 ### 2.7. Lists and Keys
 
